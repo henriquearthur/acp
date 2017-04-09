@@ -1,0 +1,121 @@
+/*! IceHabbo - by Henrique Arthur <eu@henriquearthur.me> */
+
+$width_content: 300px;
+
+@import 'bourbon/bourbon';
+
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+a,
+a:link,
+a:hover,
+a:active,
+a:visited {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* Geral */
+body {
+    background: #364150;
+}
+
+/* Página */
+.page {
+    margin: 0 auto;
+    width: $width_content;
+}
+
+#logo {
+    background: url(../images/logo.png);
+    margin: 70px auto 30px auto;
+    width: 170px;
+    height: 124px;
+}
+
+#box-login {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #eceef1;
+    padding: 30px;
+    width: $width_content;
+}
+
+.form-status {
+    border-radius: 4px;
+    background: #e74c3c;
+    font-weight: 400;
+    font-size: 13px;
+    font-family: Open Sans;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.input {
+    border: none;
+    border-radius: 4px;
+    background: #dde3ec;
+    font-weight: 400;
+    font-size: 15px;
+    font-family: Open Sans;
+    color: #8290a3;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+
+    @include transition(.3s all ease);
+    &::-webkit-input-placeholder {
+        color: #8290a3;
+    }
+    &:focus {
+        background: #fff;
+        color: #8290a3;
+
+        @include transition(.3s all ease);
+    }
+}
+
+#submit {
+    border: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background: #6c7a8d;
+    font-weight: 600;
+    font-size: 18px;
+    font-family: Open Sans;
+    color: #c3cedd;
+    padding: 15px;
+    width: $width_content;
+    outline: none;
+    letter-spacing: -1px;
+    cursor: pointer;
+
+    @include transition(.3s all ease);
+    &:hover {
+        background: darken(#6c7a8d, 5%);
+        color: darken(#c3cedd, 5%);
+
+        @include transition(.3s all ease);
+    }
+}
+
+.copyright {
+    font-weight: 300;
+    font-size: 12px;
+    font-family: Open Sans;
+    color: #fff;
+    margin-top: 10px;
+    width: 100%;
+    text-align: right;
+}
